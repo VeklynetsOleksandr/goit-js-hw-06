@@ -15,6 +15,7 @@ function onInputBlur() {
     inputVal.classList.remove("invalid");
   }
   if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
+    inputVal.classList.remove("valid");
     inputVal.classList.add("invalid");
   }
 }

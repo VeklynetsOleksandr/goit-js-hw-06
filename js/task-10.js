@@ -13,11 +13,13 @@ function getAmount() {
   createBoxes(amount);
 }
 
+let basicSize = 30;
+
 function createBoxes(amount) {
-  let basicSize = 30;
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
+    basicSize += 10;
     let size = basicSize + i * 10;
     const div = document.createElement("div");
     div.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}`;
@@ -28,4 +30,5 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   boxes.innerHTML = "";
+  basicSize = 30;
 }

@@ -21,6 +21,11 @@ function onFormSubmit(event) {
     password,
   };
 
-  console.log(formData);
-  event.currentTarget.reset();
+  if (
+    event.currentTarget.elements.email.value !== "" &&
+    event.currentTarget.elements.password.value !== ""
+  ) {
+    console.log(formData);
+    event.currentTarget.reset();
+  }
 }
